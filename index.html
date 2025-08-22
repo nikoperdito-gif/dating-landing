@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dating Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-br from-pink-200 via-red-200 to-yellow-200">
+  <div class="bg-white shadow-2xl rounded-2xl p-10 max-w-md text-center">
+    <h1 id="headline" class="text-3xl font-bold mb-6">Find your match today</h1>
+    <p id="subtitle" class="text-gray-600 mb-6">Join thousands of people looking for love.</p>
+    <a id="cta" href="https://t.mbsrv2.com/379942/3785/0?bo=2753,2754,2755,2756&target=stories&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank" class="block bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition">Start Now</a>
+
+    <div class="mt-6">
+      <label for="language" class="block text-gray-700 mb-2 font-medium">🌐 Language</label>
+      <select id="language" class="w-full border rounded-lg p-2">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        headline: "Find your match today",
+        subtitle: "Join thousands of people looking for love.",
+        cta: "Start Now"
+      },
+      ru: {
+        headline: "Найди свою пару уже сегодня",
+        subtitle: "Присоединяйся к тысячам людей в поиске любви.",
+        cta: "Начать"
+      },
+      es: {
+        headline: "Encuentra tu pareja hoy",
+        subtitle: "Únete a miles de personas buscando amor.",
+        cta: "Comenzar"
+      },
+      fr: {
+        headline: "Trouvez votre âme sœur aujourd'hui",
+        subtitle: "Rejoignez des milliers de personnes en quête d'amour.",
+        cta: "Commencer"
+      },
+      de: {
+        headline: "Finde noch heute dein Match",
+        subtitle: "Schließe dich Tausenden auf der Suche nach Liebe an.",
+        cta: "Starten"
+      }
+    };
+
+    const languageSelector = document.getElementById("language");
+    const headline = document.getElementById("headline");
+    const subtitle = document.getElementById("subtitle");
+    const cta = document.getElementById("cta");
+
+    languageSelector.addEventListener("change", (e) => {
+      const lang = e.target.value;
+      headline.textContent = translations[lang].headline;
+      subtitle.textContent = translations[lang].subtitle;
+      cta.textContent = translations[lang].cta;
+    });
+  </script>
+</body>
+</html>
